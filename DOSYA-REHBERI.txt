@@ -1,0 +1,237 @@
+ANTALYA MODERN MERMER — DOSYA REHBERİ
+Tarih: 23 Ağustos 2026
+Kaynak site: https://www.antalyamodernmermer.com.tr/ (Google Sites)
+Hedef: GitHub Pages + özel alan adı
+
+==================================================
+1) MEVCUT SİTE ANALİZİ (KISA)
+==================================================
+- Google Sites şablonu: sol menü, zayıf içerik iskeleti, “Mordern” yazım hatası.
+- Menü: Ana Sayfa, Hakkımızda, İletişim, Antalya Mermer Tezgah (ilçe alt sayfaları), Ürünlerimiz (mermer, porselen, granit, çimstone, mezar).
+- NAP (işletme kimliği):
+  Unvan: Antalya Modern Mermer & Granit
+  Adres: Yeşildere Mah. Gazi Bulvarı No:560/1 Muratpaşa / Antalya
+  Tel: 0533 317 11 46  ve  0533 659 28 66
+  WhatsApp: https://wa.me/905333171146
+  Instagram: https://instagram.com/modernmermergranit07
+- Not: Mesajdaki “koltuk yıkama” bu firmanın işi değil. Site mermer/granit atölyesi olarak kuruldu. Yerel hizmet sitesi mimarisi (NAP, WhatsApp, ilçe sayfaları) koltuk yıkama siteleriyle aynı disiplinle uygulandı.
+
+==================================================
+2) YENİ SİTE NE GETİRİYOR
+==================================================
+SEO
+- Her sayfada benzersiz title, description, canonical, Open Graph, Twitter card
+- sitemap.xml, robots.txt, 404, breadcrumb
+- NAP tekrarı (footer + iletişim + schema)
+
+AEO (cevap motoru)
+- “Kısa cevap / answer-box” blokları
+- FAQ + FAQPage JSON-LD
+- Soru-cevap başlıkları düz Türkçe
+
+GEO (yapay zekâ / LLM arama)
+- llms.txt (kökte; modellerin okuması için)
+- LocalBusiness + Service schema
+- geo.region / geo.placename
+- İlçe sayfaları ayrı URL (kapı sayfası değil; yerel gerçek metin)
+
+Humanity tarzı
+- Serif başlık (Cormorant Garamond) + sans gövde (Outfit)
+- Krem / mürekkep / bronz palet, geniş boşluk, fotoğraf ağırlıklı
+- Mobil önce: 48px buton, hamburger, yapışkan WhatsApp + ara
+
+Teknik
+- Statik HTML/CSS/JS (GitHub Pages uyumlu)
+- Form backend yok: WhatsApp’a düşer (data-whatsapp-form)
+- Eski dosya adları yeni URL’lere yönlenir
+
+==================================================
+3) KLASÖR AĞACI
+==================================================
+/
+  index.html
+  hakkimizda.html
+  iletisim.html
+  404.html
+  anasayfa.html                  → index.html yönlendirme (eski Google Sites adı)
+  ileitisim.html                 → iletisim.html (eski yazım hatası)
+  urunlerimiz.html               → urunler/index.html
+  antalyamemrertezgah.html       → hizmet-bolgeleri/antalya-mermer-tezgah.html
+  css/style.css
+  js/main.js
+  robots.txt
+  sitemap.xml
+  CNAME                          (www.antalyamodernmermer.com.tr)
+  .nojekyll
+  site.webmanifest
+  llms.txt
+  humans.txt
+  DOSYA-REHBERI.txt              (bu dosya)
+  assets/icons/                  favicon ve PWA ikonları
+  assets/img/logo/
+  assets/img/hero/
+  assets/img/atolye/
+  assets/img/urunler/
+  assets/img/seo/
+  urunler/
+  hizmet-bolgeleri/
+
+Canlı URL eşlemesi (yayından sonra):
+  /                              ana sayfa
+  /hakkimizda.html
+  /iletisim.html
+  /urunler/
+  /urunler/mermer-tezgah.html
+  /urunler/granit-yuzeyler.html
+  /urunler/cimstone-kuvars.html
+  /urunler/porselen-tezgah.html
+  /urunler/mezar-modelleri.html
+  /hizmet-bolgeleri/antalya-mermer-tezgah.html
+  /hizmet-bolgeleri/muratpasa.html
+  /hizmet-bolgeleri/kepez.html
+  /hizmet-bolgeleri/konyaalti.html
+  /hizmet-bolgeleri/dosemealti.html
+  /hizmet-bolgeleri/aksu.html
+  /hizmet-bolgeleri/serik.html
+  /hizmet-bolgeleri/manavgat.html
+  /hizmet-bolgeleri/alanya.html
+  /hizmet-bolgeleri/kemer.html
+  /hizmet-bolgeleri/kumluca.html
+  /hizmet-bolgeleri/finike.html
+  /hizmet-bolgeleri/kas-kalkan.html
+
+==================================================
+4) GÖRSELLER — MEVCUT DOSYALAR (YOL, BOYUT, AĞIRLIK)
+==================================================
+Logo ve ikon
+  assets/img/logo/logo-modern-mermer.png     1600×1600    48 KB    tam logo (şeffaf PNG)
+  assets/img/logo/logo-nav.png               240×240       7 KB    header için küçültülmüş
+  assets/icons/favicon.svg                   SVG           <1 KB
+  assets/icons/favicon-16.png                16×16         1 KB
+  assets/icons/favicon-32.png                32×32         1 KB
+  assets/icons/favicon-48.png                48×48         2 KB
+  assets/icons/apple-touch-icon.png          180×180       6 KB
+  assets/icons/icon-192.png                  192×192       7 KB    PWA
+  assets/icons/icon-512.png                  512×512      20 KB    PWA
+
+Hero / atölye
+  assets/img/hero/hero-banner.jpg            1920×1080   272 KB    ana sayfa yatay banner (KULLANILAN)
+  assets/img/hero/hero-urunler.jpg           1920×900     98 KB    ürünler hero
+  assets/img/hero/hero-atolye.jpg            650×900    1405 KB    dikey orijinal (hakkımızda/iletişim)
+  assets/img/hero/hero-mutfak-tezgah.jpg     1200×1600   170 KB    yedek dikey
+  assets/img/atolye/atolye-iscilik.jpg       650×900     919 KB    hakkımızda + ana sayfa split
+
+Ürün — kart (liste 3:4)
+  assets/img/urunler/mermer-tezgah-card.jpg        800×1000   105 KB
+  assets/img/urunler/granit-tezgah-card.jpg        800×1000   123 KB
+  assets/img/urunler/cimstone-kuvars-card.jpg      800×1000    90 KB
+  assets/img/urunler/porselen-tezgah-card.jpg      800×1000    78 KB
+  assets/img/urunler/mezar-modelleri-card.jpg      800×1000   173 KB
+
+Ürün — detay / orijinal
+  assets/img/urunler/mermer-tezgah-antalya.jpg     864×1184   111 KB
+  assets/img/urunler/granit-tezgah-antalya.jpg     1200×1600  367 KB
+  assets/img/urunler/granit-yuzey-detay.jpg        650×900   1489 KB   ağır; değiştirin
+  assets/img/urunler/cimstone-kuvars-antalya.jpg   1600×1200  266 KB
+  assets/img/urunler/cimstone-kuvars-detay.jpg     650×900    698 KB
+  assets/img/urunler/porselen-tezgah-antalya.jpg   650×900    836 KB
+  assets/img/urunler/mezar-modelleri-antalya.jpg   864×1184   193 KB
+  assets/img/urunler/mezar-model-detay.jpg         650×900   1657 KB   ağır; değiştirin
+
+SEO paylaşım
+  assets/img/seo/og-antalya-modern-mermer.jpg     1200×630   151 KB   Facebook/WhatsApp/Google
+  assets/img/seo/og-square.jpg                    1200×1200  290 KB   kare yedek
+
+Kaynak: Google Drive’daki mevcut site görselleri indirilip yeniden adlandırıldı.
+Drive ID eşlemesi (yedek için):
+  logo-modern-mermer.png           1ZAbySp5StKxCaGN2PNoPU_bCS_AHwTW0
+  hero-mutfak-tezgah.jpg           1eKQtDoAEfm8VvDOIrEgnAdQK2OENG938
+  mermer-tezgah-antalya.jpg        1HuQQQcPO-Pjf-YxpDWd6FMG2qrt5_Vom
+  granit-tezgah-antalya.jpg        1QjYpVKRPmt9686z-2Um1kF4E3y_Ek3qM
+  cimstone-kuvars-antalya.jpg      1lMSOdXx7pTSot0d29DkDT62exLiFqCGg
+  mezar-modelleri-antalya.jpg      1ijIcSa17JspSMXi_W7X1CCoRu2DER-GD
+  hero-atolye.jpg                  17anxeg1XdnMywp5jl6IAcRUYLAgz66UU
+  atolye-iscilik.jpg               1G6YlVPsTW5hFn4vgLXis8Mn8bv6ww_3K
+  porselen-tezgah-antalya.jpg      1RlPf9exUhHqFowXW6a_JQyGcLljwh0UO
+  granit-yuzey-detay.jpg           1IhvcOncG5cCMEzFHXpQfp8KcfPukQkTz
+  cimstone-kuvars-detay.jpg        1lLq-JpnSyLWeBjjme8zT_ZBe0qVSMT2L
+  mezar-model-detay.jpg            12QxWW3n_4bGxeOO03SefUNXLvEctvTag
+
+==================================================
+5) YENİ FOTO ÇEKERKEN HEDEF BOYUTLAR (DEĞİŞTİRME REHBERİ)
+==================================================
+Aynı DOSYA ADINI koruyun; sadece içeriği değiştirin. Kod yolu bozulmaz.
+
+Dosya adı                                      Önerilen piksel     Oran     Max ağırlık   Kullanım
+---------------------------------------------  ------------------  -------  ------------  -------------------------
+logo-modern-mermer.png                         1600×1600           1:1      80 KB         tam logo, şeffaf zemin
+logo-nav.png                                   240×240             1:1      20 KB         header
+favicon.svg                                    vektör              —        5 KB          tarayıcı ikonu
+apple-touch-icon.png                           180×180             1:1      20 KB         iPhone
+icon-192.png / icon-512.png                    192 / 512           1:1      40 / 80 KB    PWA
+hero-banner.jpg                                1920×1080           16:9     250–350 KB    ana hero (yatay mutfak)
+hero-urunler.jpg                               1920×900            ~2:1     200 KB        ürünler kapak
+hero-atolye.jpg                                1600×900            16:9     250 KB        hakkımızda (şimdi dikey; yatay çekin)
+atolye-iscilik.jpg                             1200×1500           4:5      250 KB        ustalık fotoğrafı
+*-card.jpg (5 adet ürün kartı)                 800×1000            4:5      120 KB        liste kartları
+mermer-tezgah-antalya.jpg                      1600×2000           4:5      250 KB        ürün detay
+granit-tezgah-antalya.jpg                      1600×2000           4:5      250 KB
+granit-yuzey-detay.jpg                         1600×2000           4:5      250 KB        ŞU AN 1.5 MB — küçültün
+cimstone-kuvars-antalya.jpg                    1600×1200           4:3      250 KB
+porselen-tezgah-antalya.jpg                    1600×2000           4:5      250 KB
+mezar-modelleri-antalya.jpg                    1600×2000           4:5      250 KB
+mezar-model-detay.jpg                          1600×2000           4:5      250 KB        ŞU AN 1.6 MB — küçültün
+og-antalya-modern-mermer.jpg                   1200×630            1.91:1   150 KB        sosyal paylaşım
+og-square.jpg                                  1200×1200           1:1      200 KB
+
+Fotoğraf ipucu
+- Mutfak tezgahı: gündüz, geniş açı, evye + damar net, insan eli (ölçek) isteğe bağlı
+- Atölye: kesim, kenar, cila; tozlu “sahte stüdyo” değil gerçek tezgah
+- Mezar: saygılı kadraj, mezarlık reklamı gibi değil; model ve işçilik
+- Dosya adı: küçük harf, Türkçe karakter yok, boşluk yok, tire ile
+- Format: fotoğraf JPG (kalite 75–82), logo PNG veya SVG
+- Alt metin kodda var; yeni fotoğrafın konusu değişirse HTML alt’ını da güncelleyin
+
+Eksik / önerilen ek kareler (henüz yok; isterseniz ekleriz)
+  assets/img/urunler/mutfak-once-sonra-01.jpg     1600×900
+  assets/img/ekip/usta-olcu.jpg                   1200×1500
+  assets/img/harita/atolye-cephe.jpg              1600×900
+
+==================================================
+6) GITHUB PAGES YAYIN
+==================================================
+1. Bu klasörü GitHub deposu yapın (veya mevcut depoya push).
+2. Settings → Pages → Source: Deploy from a branch → main / root.
+3. CNAME dosyası zaten www.antalyamodernmermer.com.tr yazıyor.
+4. Alan adı DNS (Google Domains / Natro / Türk teslimci):
+   A kaydı GitHub Pages IP’leri veya
+   CNAME: www → <kullanici>.github.io
+   Apex (@) için ALIAS/ANAME veya GitHub A kayıtları.
+5. HTTPS’i Pages ayarından zorunlu kılın.
+6. Google Search Console’a sitemap ekleyin:
+   https://www.antalyamodernmermer.com.tr/sitemap.xml
+7. Google İşletme Profili web sitesini yeni adrese kilitleyin (NAP aynı kalsın).
+
+Yerelde önizleme:
+  klasörde: python -m http.server 8080
+  tarayıcı: http://127.0.0.1:8080/
+
+==================================================
+7) SİZİN KONTROL LİSTENİZ
+==================================================
+[ ] Çalışma saatleri doğru mu? (kodda Pzt–Cmt 08:30–18:30, Pazar randevu)
+[ ] İkinci telefon 0533 659 28 66 hâlâ aktif mi?
+[ ] Instagram kullanıcı adı modernmermergranit07 mi?
+[ ] E-posta yok; eklenecekse iletisim.html ve schema
+[ ] Ağır JPG’leri (granit-yuzey-detay, mezar-model-detay, hero-atolye) sıkıştırın
+[ ] Yatay mutfak hero (1920×1080) çekip hero-banner.jpg üzerine yazın
+[ ] Google Sites’ı yayın sonrası yönlendirin veya kapatın (çift site SEO’yu böler)
+[ ] Form GitHub’da sunucusuz; CRM isterseniz Formspree/Netlify Forms sonra eklenir
+
+==================================================
+8) MARKA / YAZIM
+==================================================
+Kullanılan doğru unvan: Antalya Modern Mermer & Granit
+Eski sitedeki “Mordern” kullanılmadı.
+Alan adı: antalyamodernmermer.com.tr
+Kısa marka: Modern Mermer
