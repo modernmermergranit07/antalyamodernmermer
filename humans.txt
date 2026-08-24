@@ -1,5 +1,0 @@
-/* The Antalya Modern Mermer website.
-   Contact: 0533 317 11 46
-   From: Muratpasa, Antalya
-   Standards: HTML5, CSS3, Schema.org, llms.txt
-*/
